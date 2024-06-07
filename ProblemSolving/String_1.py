@@ -1,0 +1,13 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        for i in range(len(s)):
+            if s[i] not in s[i+1:] and s[i] not in s[:i]:
+                return i
+        return -1
+    def test(self, s : str)-> None:
+        print(s[2:])
+        print(s[:2])
+# sequence[start:stop:step]
+s = Solution()
+print (s.firstUniqChar("asafsdsd"))
+s.test("abcde")
